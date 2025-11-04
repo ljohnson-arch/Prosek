@@ -1,10 +1,21 @@
 void setup(){
 size(1200, 500);
 background(200);
-createFish(200, 200, 100, 50); 
+createGroup1(1200, 200);
 }
 
-void createFish(int x, int y, int w, int h){
+
+void createGroup1(float x, float y){
+  for (int i = 0; i < 100; i++){
+    createFish(random(x), random(y), random(30), random(30));
+  }
+   
+    
+}
+
+
+
+void createFish(float x, float y, float w, float h){
   noFill();
   ellipseMode(RADIUS);
   ellipse(x, y, w, h);
